@@ -1,0 +1,11 @@
+[[getting_started]]
+== How to set up Git
+
+=== Sign up and fork an existing repository
+
+
+=== Git most important commands
+[source,git]
+----
+$ git status
+----
