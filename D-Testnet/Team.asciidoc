@@ -1,0 +1,9 @@
+[[getting_started]]
+== D-Coin
+
+=== Working Team
+Cardaci Salvatore +
+Damiani Andrea +
+Fondi Stefano +
+Lucidi Fabio +
+Mazzocchi Paolo +
