@@ -23,7 +23,7 @@ Per firmare un messaggio deve essere generato un nonce, ovvero un numero random 
 
 ## *Transazioni*
 
-I bitcoin esistono in quanto presenti sulla Blockchain, un database distribuito, sul quale non sono presenti i conti e i saldi di chi li possiede, ma solamente le transazioni che li  spostano da un proprietario ad un altro.
+I bitcoin esistono in quanto presenti sulla Blockchain, un database distribuito, sul quale non sono presenti i conti e i saldi di chi li possiede, ma solamente le transazioni che li spostano da un proprietario ad un altro.
 
 Ogni transazione è composta da una lista di input (TxIn) e di output (TxOut). Ogni output è composto da un importo e dall’“indirizzo” al quale è destinato; solamente chi può accedere a quell’indirizzo è in grado di  disporre dei bitcoin ad esso corrispondenti. Ciascun input, invece, contiene un riferimento all’output precedente (in questo modo le transazioni sono tra loro legate ed è possibile ripercorre la storia di ciascuna moneta) e la firma digitale che autorizza la spesa dei relativi TxOut; la firma deve essere associata all’“indirizzo” al quale sono stati inviati i bitcoin.
 
@@ -39,26 +39,16 @@ Ogni TxOut contiene un puzzle matematico che deve essere risolto per poter spend
 
 ## *Consenso distribuito e Proof Of Work*
 
-Schema:
-* limiti del sistema centralizzato
+Il vero grande successo del protocollo **Bitcoin** è quello di aver dato vita ad un sistema elettronico di pagamenti *peer-to-peer*, sicuro e affidabile, che non richiede fiducia in una Autority centrale, ma fondato su un algoritmo di consenso distribuito. Questo traguardo è stato possibile grazie alla **Blockchain**, un registro pubblico, distribuito e inalterabile, contenente la storia di tutte le transazioni.
 
-* sistema decentralizzato
+Un sistema centralizzato sarebbe infatti esposto a diversi rischi. La presenza di un unico agente alla base dell'intero ecosistema comporta una fragilità intrinseca, il cosiddetto *Single Point of Failure*: l'ente centrale ha il potere di alterare o censurare i dati presenti nel registro.
 
-* problema dei generali bizantini
+I rischi derivanti da questo accentramento possono essere superati solo attraverso una ridistribuzione del potere dell'Autority. Tuttavia in questo contesto sorge una ulteriore difficoltà: ogni individuo che partecipa alla rete ha la possibilità di scrivere all'interno del registro. Come è possibile garantire che tale registro sia univoco e accettato da tutti? Tale criticità può essere ricondotta a quella formalizzata per la prima volta da Marshall Pease, Robert Shostak e Leslie Lamport nel 1982 e nota con il nome di *"Problema dei Generali Bizantini"*.
 
-* Blockchain & Proof of Work
+Nel loro articolo, [*"The Bizantine Generals Problem"*](http://research.microsoft.com/en-us/um/people/lamport/pubs/byz.pdf), gli autori immaginano una situazione in cui diversi generali di un esercito devono decidere la strategia di attacco potendo comunicare tra di loro solo attraverso dei messaggeri. Tra di essi potrebbero esserci dei traditori. Per la buona riuscita dell'attacco è necessario che i generali si accordino su un univoco piano di azione e che un numero esiguo di traditori non possa alterarne il risultato.
 
-Il vero grande successo del protocollo **Bitcoin** è quello di aver dato vita ad un sistema elettronico di pagamenti sicuro che non richiede fiducia in una Autority centrale, ma fondato su un algoritmo di consenso distribuito. Questo traguardo è stato possibile grazie alla **Blockchain**, un registro pubblico, distribuito e inalterabile contenente la storia di tutte le transazioni.
+L'analogia con la rete *peer-to-peer* utilizzata nel protocollo Bitcoin risiede proprio nella necessità di trovare un consenso univoco sulle transazioni da scrivere nella Blockchain, impedendo ai nodi che agiscono in modo scorretto di alterare la storia delle transazioni.
 
-Un sistema centralizzato è esposto infatti a diversi rischi. La presenza di un unico agente alla base dell'intero ecosistema comporta una fragilità intrinseca, il cosiddetto *Single Point of Failure*. L'ente centrale ha il potere di alterare o censurare, anche in buona fede, i dati.
-
-Il superamento di questi limiti può essere raggiunto solo attraverso una ridistribuzione del potere dell'Autority. Tuttavia in questo contesto sorge il problema di come raggiungere il consenso (un'informazione condivisa da tutti). Tale problema, irrisolto fino all'avvento di Bitcoin, è noto come il problema dei Generali Bizzantini.
-
- Per poter andare oltre a questi limiti è necessario muoversieliminare l'Autority centrale e muoversi verso un sistema
-
-Un registro pubblico decentralizzato consente di superare questi limiti, mettendo  attraverso il consenso distribuito.
-
-
-consente di ris risulta invulnerabile alla censconsente transazioni anche in assenza di fiducia tra le parti senza un garante esterno.
+La soluzione proposta da Satoshi Nakamoto è basata sul fornire un incentivo di natura economica.
 
 ## *Mining*
