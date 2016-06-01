@@ -1,6 +1,8 @@
-= Capitolo 2 - Blockchain e Bitcoin: cosa sono e quali sono gli elementi che li definiscono
+= Capitolo 2
 
-== Chiave Pubblica, Chiave Privata e _firma digitale_
+= Blockchain e Bitcoin: cosa sono e quali sono gli elementi che li definiscono
+
+== Chiave Pubblica, Chiave Privata e Firma Digitale
 
 In Bitcoin viene usata la crittografia a chiave pubblica per la generazione di una coppia di chiavi composta da una chiave pubblica e una privata. La chiave pubblica viene utilizzata per ricevere fondi e può essere paragonata al numero di un conto in banca; la chiave privata serve per firmare le transazioni e spendere i fondi rappresentando l’analogo del PIN che permette di controllare il conto.
 
@@ -43,7 +45,7 @@ Controlla che le firme di ciascun input siano valide, ovvero che ogni input  sia
 
 Il software Bitcoin mantiene l’insieme di tutti gli output non ancora spesi (_UTXO set_), in modo che sia facile verificare la validità di una transazione, in quanto tale struttura occupa molto meno spazio dell’intera blockchain e può essere gestita dalla RAM. *Si può quindi affermare che i bitcoin in circolazione siano gli output non spesi delle transazioni presenti sulla blockchain*. Inoltre, essendo ciascun _UTXO_ nella blockchain è inalterabile e non può essere speso a meno che venga presentato un _TxIn_ che soddisfi le condizioni richieste, rimuovendolo così dall’_UTXO set_.
 
-Finora abbiamo assunto che gli output siano inviati ad un indirizzo Bitcoin, in realtà il protoccollo è molto più flessibile: ogni _TxOut_ contiene un puzzle matematico che deve essere risolto per poter spendere l’importo in bitcoin associato. Il puzzle per sbloccare i fondi e la realtiva soluzione sono rappresentati da due script. Il primo è quello che crea il puzzle e viene denominato <_scriptPubKey_> poiché nella sua versione più semplice contiene la chiave pubblica; il secondo, che sblocca i fondi, è chiamato <_scriptSig_> in quanto contiene la firma associata all’indirizzo al quale sono stati inviati i bitcoin ed è contenuto all’interno dei _TxIn_.
+Finora abbiamo assunto che gli output siano inviati ad un indirizzo Bitcoin, in realtà il protoccollo è molto più flessibile: ogni _TxOut_ contiene un puzzle matematico che deve essere risolto per poter spendere l’importo in bitcoin associato. Il puzzle per sbloccare i fondi e la realtiva soluzione sono rappresentati da due script. Il primo è quello che crea il puzzle e viene denominato < _scriptPubKey_ > poiché nella sua versione più semplice contiene la chiave pubblica; il secondo, che sblocca i fondi, è chiamato < _scriptSig_ > in quanto contiene la firma associata all’indirizzo al quale sono stati inviati i bitcoin ed è contenuto all’interno dei _TxIn_.
 
 == Consenso distribuito e Proof Of Work
 
