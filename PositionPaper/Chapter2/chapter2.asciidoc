@@ -37,11 +37,10 @@ Una transazione contiene al suo interno una variabile denominata _lock time_, in
 
 Una volta che una transazione viene inviata al network, il primo nodo che la riceve verifica che sia valida, in caso affermativo, il nodo la propaga al resto della rete. Per verificare che una transazione sia valida, un nodo segue i tre step seguenti:
 
-Verifica che sia definitiva (non bloccata da _lock time_ e avente tutti i _sequence number_ valorizzati al massimo).
-
-Controlla che esistano gli output precedenti a cui gli input della transazione fanno riferimento e che non siano ancora stati spesi. I nodi conducono tale verifica consultando l’insieme degli output non ancora spesi presenti delle transazioni presenti sulla blockchain (_UTXO set_).
-Verifica che la somma dei valori in input sia maggiore di quelli in output; la differenza tra i due importi viene considerata come _fee_ lasciata al miner e viene inclusa nella _coinbase transaction_.
-Controlla che le firme di ciascun input siano valide, ovvero che ogni input  sia firmato con la chiave privata corrispondente alla chiave pubblica associata all’indirizzo a cui si riferisce.
+* Verifica che sia definitiva (non bloccata da _lock time_ e avente tutti i _sequence number_ valorizzati al massimo).
+* Controlla che esistano gli output precedenti a cui gli input della transazione fanno riferimento e che non siano ancora stati spesi. I nodi conducono tale verifica consultando l’insieme degli output non ancora spesi presenti delle transazioni presenti sulla blockchain (_UTXO set_).
+* Verifica che la somma dei valori in input sia maggiore di quelli in output; la differenza tra i due importi viene considerata come _fee_ lasciata al miner e viene inclusa nella _coinbase transaction_.
+* Controlla che le firme di ciascun input siano valide, ovvero che ogni input  sia firmato con la chiave privata corrispondente alla chiave pubblica associata all’indirizzo a cui si riferisce.
 
 Il software Bitcoin mantiene l’insieme di tutti gli output non ancora spesi (_UTXO set_), in modo che sia facile verificare la validità di una transazione, in quanto tale struttura occupa molto meno spazio dell’intera blockchain e può essere gestita dalla RAM. *Si può quindi affermare che i bitcoin in circolazione siano gli output non spesi delle transazioni presenti sulla blockchain*. Inoltre, essendo ciascun _UTXO_ nella blockchain è inalterabile e non può essere speso a meno che venga presentato un _TxIn_ che soddisfi le condizioni richieste, rimuovendolo così dall’_UTXO set_.
 
