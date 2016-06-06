@@ -58,6 +58,10 @@ Nel loro articolo, link:http://research.microsoft.com/en-us/um/people/lamport/pu
 
 L'analogia con la rete *peer-to-peer* utilizzata nel protocollo Bitcoin risiede proprio nella necessità di trovare un consenso univoco sulle transazioni da scrivere nella Blockchain, impedendo ai nodi che agiscono in modo scorretto di alterare la storia delle transazioni.
 
-La soluzione proposta da Satoshi Nakamoto è basata sul fornire un incentivo di natura economica.
+La proposta di Satoshi Nakamoto risolve questo problema attraverso l'utilizzo di incentivi di natura economica: rendite di signoraggio sono garantite a chi scrive transazioni nel registro condiviso, ovvero colui che dimostra di aver bruciato più risorse al di fuori della rete per risolvere un problema di natura crittografica. Questa procedura è nota con il nome di *proof of work (PoW)*.
+
+colui che valida il blocco e colui che ha bruciato più risorse.
+
+il lavoro non è "inutile" perchè viene usato per dare sicurezza alla rete. I costi di una moneta tradizionale sono molto più elevati.
 
 == Mining
