@@ -62,7 +62,7 @@ La soluzione proposta da Satoshi Nakamoto è basata sul fornire un incentivo di 
 
 == Mining
 
-== Hash pointer, strutture dati blockchain e Merkle tree
+== Funzioni di Hash e strutture dati Blockchain
 
 La lettura della presente sezione permetterà di rendere chiaro il perchè della seguente affermazione:
 
